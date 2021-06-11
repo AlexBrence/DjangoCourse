@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <style>
+      body {
+        background-color: #9e7c80;
+      }
+      .jumbotron {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        background-color: #e9ecef;
+        border-radius: .3rem;
+      }
+      .container {
+        background-color: #e9ecef;
+      }
+    </style>
+  </head>
+  <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="https://cdn.stocksnap.io/img-thumbs/960w/steaming-hot_0WYTHJ2XNH.jpg" alt="COFFEE PIC" width="100px" class="rounded-circle"></a>
+            <a class="navbar-brand" href="#">COFFEE LOVERS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" name="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Landing Page</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- jumbotron -->
+        <div class="jumbotron ps-5">
+          <h1>Log in</h1>
+          <p class="lead">Enter your email and password bellow to log in to Coffee Lover</p>
+        </div>
+
+        <div class="container mt-5 p-5 w-50 rounded">
+          <form class="" action="#" method="post">
+            <div class="mb-4">
+              <label for="email" class="form-label">Email address</label>
+              <input class="form-control" id="email" type="email" name="email" value="" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="" value="" placeholder="Password">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="checkbox" name="" value="">
+              <label for="checkbox">Keep me Logged In</label>
+            </div>
+            <button type="submit" class="btn btn-success" name="button">Submit</button>
+          </form>
+        </div>
+
+  </body>
+</html>
