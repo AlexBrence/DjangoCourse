@@ -1,23 +1,21 @@
 html {
-  border: 50px solid #b3eef9;
-  border-top: 0px;
   font-family: 'Acme', sans-serif;
   font-size: 20px;
 }
 
 body {
-  width: 40%;
   background-color: #000d38;
   color: white;
+  border: 50px solid #b3eef9;
+  border-top: 0px;
   text-align: center;
   margin: auto;
   padding: 30px 0 100px 0;
 }
 
 p {
-  padding: 20px;
-  margin-top: 10%;
-  font-size: 20px;
+  padding: 5% 20%;
+  font-size: 1.0em;
 }
 
 .signup label {
@@ -26,7 +24,7 @@ p {
 }
 
 .signup input {
-  width: 25%;
+  width: 15%;
   height: 25px;
 }
 
@@ -36,4 +34,5 @@ input[value="Submit"] {
   border-radius: 10px;
   cursor: pointer;
   background-color: orange;
+  font-size: 0.8em;
 }
