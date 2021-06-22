@@ -1,0 +1,16 @@
+body {
+	margin: 3%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	background-color: antiquewhite;
+}
+
+table tr td {
+	padding: 4px;
+	border: 1px solid black;
+}

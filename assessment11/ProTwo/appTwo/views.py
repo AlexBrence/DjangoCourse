@@ -1,0 +1,17 @@
+from django.shortcuts import render
+from .models import User
+
+# Create your views here.
+
+
+def index(request):
+	return render(request, "appTwo/index.html", {})
+
+
+
+def users(request):
+	user_list = User.objects.all()
+	user_dict = {
+		"users": user_list,
+	}
+	return render(request, "appTwo/users.html", user_dict)
