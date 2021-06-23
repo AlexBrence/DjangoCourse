@@ -3,29 +3,19 @@
 <html>
 <head>
 	<title>Users</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="{% static "appTwo/css/style.css" %}"/>
 </head>
 <body>
-	<h1>Here is the list of users</h1>
+<div class="container">
+	<h1>You can sign up here!</h1>
 
-	{% if users %}
-		<table>
-			<thead>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email</th>
-			</thead>
-			{% for user in users %}
-				<tr>
-					<td>{{ user.first_name }}</td>
-					<td>{{ user.last_name }}</td>
-					<td>{{ user.email }}</td>
-				</tr>
-			{% endfor %}
-		</table>
-	{% else %}
-		<p><b>NO USERS FOUND.</b></p>
-	{% endif %}
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" class="btn btn-primary" value="Submit">
+	</form>
+</div>
 
 </body>
 </html>

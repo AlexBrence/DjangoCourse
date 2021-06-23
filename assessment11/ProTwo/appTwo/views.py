@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import User
+from django.shortcuts import render, HttpResponseRedirect
+from .forms import NewUserForm
+from django.urls import reverse
 
 # Create your views here.
 
@@ -10,8 +11,15 @@ def index(request):
 
 
 def users(request):
-	user_list = User.objects.all()
-	user_dict = {
-		"users": user_list,
-	}
-	return render(request, "appTwo/users.html", user_dict)
+	form = NewUserForm()
+
+	if request.method == "POST":
+		form = NewUserForm(request.POST)
+
+		if form.is_valid():
+			form.save(commit=True)
+			return HttpResponseRedirect(reverse("index"))
+		else:
+			print("ERROR FORM INVALIDA")
+	
+	return render(request, "appTwo/users.html", {"form": form})
